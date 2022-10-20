@@ -75,6 +75,18 @@
     });
     console.log(text);
   </script>
+  <script>
+    const email = document.querySelector("#email");
+    const emailError = document.querySelector(".email-error");
+    email.addEventListener("input", function () {
+      let emailRegex = RegExp(
+        "[a-zA-Z1-9]+([.][a-zA-Z1-9]|)+@[a-zA-Z]+[.]co([.]in|)"
+      );
+      if (emailRegex.test(email.value)) emailError.textContent = "";
+      else emailError.textContent = "Email is Incorrect!";
+    });
+    console.log(email);
+  </script>
 </body>
 
 </html>
