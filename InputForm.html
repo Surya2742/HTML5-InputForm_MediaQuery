@@ -87,6 +87,16 @@
     });
     console.log(email);
   </script>
+  <script>
+    const number = document.querySelector("#number");
+    const numberError = document.querySelector(".number-error");
+    number.addEventListener("input", function () {
+      let numberRegex = RegExp("[0-9]{2}+[6-9][0-9]{9}");
+      if (numberRegex.test(number.value)) numberError.textContent = "";
+      else numberError.textContent = "Phone Number is Incorrect!";
+    });
+    console.log(number);
+  </script>
 </body>
 
 </html>
